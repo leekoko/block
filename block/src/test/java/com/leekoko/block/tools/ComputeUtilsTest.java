@@ -6,8 +6,9 @@ class ComputeUtilsTest {
 
     @Test
     public void getCaloriesTest(){
-        ComputeUtils.getCalories(170, 60.0, true);
+        ComputeUtils.getWeightState(170, 60.0, true);
         System.out.println();
-        ComputeUtils.getCalories(163, 46.0, false);
+//        ComputeUtils.getWeightState(163, 51.0, false);
+        ComputeUtils.getWeightState(155, 47.0, false);
     }
 }

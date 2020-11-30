@@ -11,12 +11,12 @@ import java.math.BigDecimal;
 public class ComputeUtils {
 
     /**
-     * 获取卡路里量
+     * 获取体重状况
      * @param height 身高  cm
      * @param weight 体重  kg
      * @param isMan 是否为男性
      */
-    public static void getCalories(Integer height, Double weight, Boolean isMan){
+    public static void getWeightState(Integer height, Double weight, Boolean isMan){
         Double standardWeight = 0.0;
         if(isMan){
             Integer subNum = 80;
@@ -55,6 +55,14 @@ public class ComputeUtils {
         System.out.println("您的身高："+height+"cm;体重："+weight+"kg;属于：【"+msg+"】类型;标准的体重为："+NumberUtil.roundStr(standardWeight, 2));
     }
 
+    /**
+     * 获取每天消耗卡路里量
+     * @param weight
+     * @return
+     */
+    public static Integer getCalorie(Double weight){
+        return null;
+    }
 
 
 
