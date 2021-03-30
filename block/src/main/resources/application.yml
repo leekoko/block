@@ -1,5 +1,8 @@
 server:
   port: 8080
+  # 测试用：设置最大线程数
+  tomcat:
+    max-threads: 1
 spring:
   datasource:
     name: eda-third-party-interface
@@ -21,6 +24,15 @@ spring:
     test-on-return: false
     pool-prepared-statements: true
     max-open-prepared-statements: 20
+  rabbitmq:
+    host: 192.168.0.24
+    password: 123456
+    username: eda
+    listener:
+      type: simple
+      simple:
+        default-requeue-rejected: false
+        acknowledge-mode: manual
 mybatis-plus:
   mapper-locations: classpath:/mapper/*Mapper.xml
   #实体扫描，多个package用逗号或者分号分隔
@@ -37,3 +49,8 @@ mybatis-plus:
     cache-enabled: true
     call-setters-on-nulls: true
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+rocketmq:
+  name-server: 192.168.0.128:9876
+  producer:
+    group: flow_group
+    send-message-timeout: 3000
